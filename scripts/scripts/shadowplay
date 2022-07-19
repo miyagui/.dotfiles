@@ -1,0 +1,2 @@
+#!/bin/bash
+gpu-screen-recorder -w DP-4 -c mp4 -f 60 -a "EVO4.monitor" -o /mnt/speed/zHome/Videos/_loonix/apexio-$(date +"%Y-%m-%d-%H%M").mp4

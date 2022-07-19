@@ -1,0 +1,56 @@
+#!/bin/bash
+
+#pw-link GAME:monitor_FL MIX:playback_FL
+#pw-link GAME:monitor_FR MIX:playback_FR
+#echo 'GAME-MIX loaded'
+
+#pw-link 'NoiseTorch Microphone for EVO4 Source:capture_MONO' MIX:playback_FL
+#pw-link 'NoiseTorch Microphone for EVO4 Source:capture_MONO' MIX:playback_FR
+#echo 'NoiseTorch-MIX loaded'
+
+# pw-link COMMS:monitor_1 MIX:playback_FL
+# pw-link COMMS:monitor_2 MIX:playback_FR
+# echo 'COMMS-MIX loaded'
+
+# pw-link 8channel:monitor_FL 'Sennheiser USB Headset:playback_FL'
+# pw-link 8channel:monitor_FR 'Sennheiser USB Headset:playback_FR'
+# pw-link 8channel:monitor_FC 'Sennheiser USB Headset:playback_FL'
+# pw-link 8channel:monitor_FC 'Sennheiser USB Headset:playback_FR'
+# pw-link 8channel:monitor_SL 'Sennheiser USB Headset:playback_FL'
+# pw-link 8channel:monitor_SR 'Sennheiser USB Headset:playback_FR'
+# pw-link 8channel:monitor_RL 'Sennheiser USB Headset:playback_FL'
+# pw-link 8channel:monitor_RR 'Sennheiser USB Headset:playback_FR'
+# echo '8channel-Sennheiser loaded'
+
+# pw-link 8channel:monitor_FL GAME:playback_1
+# pw-link 8channel:monitor_FR GAME:playback_2
+# pw-link 8channel:monitor_FC GAME:playback_1
+# pw-link 8channel:monitor_FC GAME:playback_2
+# pw-link 8channel:monitor_SL GAME:playback_1
+# pw-link 8channel:monitor_SR GAME:playback_2
+# pw-link 8channel:monitor_RL GAME:playback_1
+# pw-link 8channel:monitor_RR GAME:playback_2
+# echo '8channel-GAME loaded'
+
+# pw-link GAME:monitor_1 'Sennheiser USB Headset:playback_FL'
+# pw-link GAME:monitor_2 'Sennheiser USB Headset:playback_FR'
+# echo 'GAME-Sennheiser loaded'
+
+# pw-link GAME:output_1 'EVO4:playback_1'
+# pw-link GAME:output_2 'EVO4:playback_2'
+# echo 'GAME-EVO4'
+
+# pw-link COMMS:monitor_1 'Sennheiser USB Headset:playback_FL'
+# pw-link COMMS:monitor_2 'Sennheiser USB Headset:playback_FR'
+# echo 'COMMS-Sennheiser loaded'
+
+# pw-link COMMS:output_1 'EVO4:playback_1'
+# pw-link COMMS:output_2 'EVO4:playback_2'
+# echo 'COMMS-EVO4'
+
+#pw-link EVO4:capture_1 'Noise Canceling Source:input_FR'
+#echo 'EVO-Noise R-channel duplicate loaded'
+
+# pw-link 'Noise Canceling Source:capture_1' MIX:playback_FL
+# pw-link 'Noise Canceling Source:capture_2' MIX:playback_FR
+# echo 'Noise-MIX loaded'
