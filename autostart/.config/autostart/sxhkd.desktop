@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name="sxhkd keyboard bindings"
+GenericName="sxhkd"
+Comment="Sxhkd autostart"
+Exec=/usr/bin/sxhkd
+Terminal=false
+Type=Application
+X-Gnome-Autostart=true
+Hidden=false
+

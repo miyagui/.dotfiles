@@ -1,0 +1,4 @@
+F12
+	tdrop -ma -w 1280 -h 352 -x 640 -y 728 -s tdrop alacritty
+super + ctrl + shift + c
+	xdotool getwindowfocus windowkill
