@@ -25,6 +25,8 @@ window:
 key_bindings:
   - { key: F11, action: ToggleFullscreen }
 
+
+
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
 
 # Import additional configuration files
