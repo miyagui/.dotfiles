@@ -31,10 +31,8 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 let g:lastplace_ignore = "gitcommit,gitrebase,svn,hgcommit"
 let g:lastplace_ignore_buftype = "quickfix,nofile,help"
 let g:lastplace_open_folds = 0
-let g:ctrlp_map='<c-p>'
-let g:ctrlp_cmd='CtrlPMRU'
-
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlPMRU'
 
 set encoding=utf-8
 set relativenumber number
