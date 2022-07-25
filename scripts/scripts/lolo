@@ -1,2 +1,0 @@
-#!/bin/bash
-sh -c 'sysctl -w abi.vsyscall32=0'

@@ -26,7 +26,7 @@ window:
     y: 10
   dynamic_title: true
   dynamic_padding: false
-  opacity: 1 
+  opacity: 0.9 
 
 mouse:
   double_click: { threshold: 300 }
@@ -69,6 +69,4 @@ shell:
 
 debug:
   render_time: false
-
-
 
