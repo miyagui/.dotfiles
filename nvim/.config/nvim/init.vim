@@ -18,6 +18,7 @@ Plug 'farmergreg/vim-lastplace'
 Plug 'mg979/vim-visual-multi'
 Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-surround'
+Plug 'khaveesh/vim-fish-syntax'
 
 call plug#end()
 

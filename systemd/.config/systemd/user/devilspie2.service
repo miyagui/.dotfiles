@@ -1,0 +1,5 @@
+[Unit]
+Description:devilspie
+
+[Service]
+ExecStart=/usr/bin/devilspie2

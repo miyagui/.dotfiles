@@ -38,6 +38,8 @@ mouse_bindings:
 
 key_bindings:
   - { key: F11, action: ToggleFullscreen }
+  - { key: Equals, mods: Control, action: IncreaseFontSize }
+  - { key: Minus, mods: Control, action: DecreaseFontSize }
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"

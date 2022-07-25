@@ -2,7 +2,7 @@
 Name="devilspie2"
 GenericName="devilspie2"
 Comment="Devilspie autostart"
-Exec=/usr/bin/devilspie2
+Exec="systemctl --user start devilspie2"
 Terminal=false
 Type=Application
 X-Gnome-Autostart=true
