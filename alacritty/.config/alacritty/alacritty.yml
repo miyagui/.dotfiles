@@ -1,21 +1,24 @@
+env:
+  TERM: xterm-256color
+
 font:
   normal:
-    family: VictorMono Nerd Font Mono 
+    family: agave Nerd Font Mono 
     style: Regular
 
   bold:
-    family: VictorMono Nerd Font Mono
+    family: agave Nerd Font Mono
     style: Bold
 
   italic:
-    family: VictorMono Nerd Font Mono
+    family: agave Nerd Font Mono
     style: Italic
 
   bold_italic:
-    family: VictorMono Nerd Font Mono
+    family: agave Nerd Font Mono
     style: Bold Italic
 
-  size: 14 
+  size: 14.0 
 
 window:
   padding:
@@ -23,15 +26,15 @@ window:
     y: 10
   dynamic_title: true
   dynamic_padding: false
-  decorations: None
-  opacity: 0.8
+  opacity: 1 
+
+mouse:
+  double_click: { threshold: 300 }
+  triple_click: { threshold: 300 }
+  hide_when_typing: true
 
 mouse_bindings:
   - { mouse: Middle, action: PasteSelection }
-
-url:
-  launcher: open
-  modifiers: Control
 
 key_bindings:
   - { key: F11, action: ToggleFullscreen }
@@ -42,9 +45,6 @@ selection:
 custom_cursor_colors: true
 
 colors:
-  #primary:
-    #background: '0x191919'
-    #foreground: '0xeaeaea'
 
   cursor:
     style: Block
@@ -54,11 +54,21 @@ colors:
 
 live_config_reload: true
 
+scrolling:
+  history: 10000
+  multiplier: 3
+
 shell:
   program: /usr/bin/tmux
   args:
     - new-session
     - -A
     - -D
-    - -s
+    - -t
     - main
+
+debug:
+  render_time: false
+
+
+

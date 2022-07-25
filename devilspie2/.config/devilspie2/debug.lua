@@ -19,6 +19,9 @@ if (get_window_name() == "term") or
 	set_window_geometry2(1280, 376, 640, 704);
 	stick_window();
 end
+if (get_window_name() == "Neovim") then
+  set_window_geometry2(1280, 1056, 0, 24);
+end
 if (gwc == "whatsapp-nativefier-d40211") or
 	(gwc == "Spotify") or
 	(gwc == "Code") then

@@ -1,4 +1,5 @@
 set nocompatible
+filetype plugin on
 syntax on
 
 call plug#begin()
@@ -16,6 +17,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'farmergreg/vim-lastplace'
 Plug 'mg979/vim-visual-multi'
 Plug 'junegunn/goyo.vim'
+Plug 'tpope/vim-surround'
 
 call plug#end()
 
@@ -25,9 +27,14 @@ nnoremap <C-f>				:NERDTreeFind<CR>
 " Move up/down editor lines includes wrapping lines
 nnoremap j gj
 nnoremap k gk
+nnoremap <up> gk
+nnoremap <down> gj
 nnoremap <C-g>        :Goyo<CR>
 
-let g:vimwiki_list = [{'auto_diary_index': 1}]
+let g:vimwiki_global_ext = 0
+let g:vimwiki_list = [{'path': '~/vimwiki/', 'name': 'miya wiki', 'syntax': 'markdown', 'ext': '.md', 'auto_diary_index': 1, 'auto_toc': 1}]
+let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown', '.wiki': 'default'}
+
 let g:NERDTreeGitStatusWithFlags = 	1
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 let g:lastplace_ignore = "gitcommit,gitrebase,svn,hgcommit"
@@ -50,10 +57,14 @@ set ruler
 " Allow hidden buffers
 set hidden
 set ttyfast
-set showmode
+set noshowmode
 set showcmd
 set t_Co=256
 set background=dark
+set noswapfile
+set nobackup
+set nocursorcolumn
+set nocursorline
 
 " Searching
 nnoremap / /\v
@@ -63,11 +74,9 @@ set incsearch
 set ignorecase
 set smartcase
 set showmatch
-map <leader><space> :let @/=''<cr> " clear search
 
 " Cursor motion
 set scrolloff=3
-set backspace=indent,eol,start
 set matchpairs+=<:> " use % to jump between pair
 
 " Sync open file with NT
@@ -80,4 +89,21 @@ if has('nvim')
   inoremap <silent><expr> <c-space> coc#refresh()
 else
   inoremap <silent><expr> <c-@> coc#refresh()
+endif
+
+" Press esc to disable search highlights
+map <esc> :noh <CR>
+
+" search mapping centered for free
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+" do not show stupid q: window
+map q: :q
+map q/ :q
+
+" persistent undo
+if has('persistent_undo')
+  set undofile
+  set undodir=~/.cache/vim
 endif
