@@ -7,6 +7,15 @@ end
 
 set fish_greeting ""
 
+function fish_user_key_bindings
+
+end
+
+if type -q exa
+  alias ll "exa -l -g --icons"
+  alias lla "ll -a"
+end
+
 # Aliases (to do... add to another file)
 alias vimwiki="nvim -c VimwikiIndex"
 alias grubo="sudo grub-mkconfig -o /boot/grub/grub.cfg"
@@ -16,3 +25,4 @@ alias shadowplay="gpu-screen-recorder -w DP-4 -c mp4 -f 60 -a "EVO4.monitor" -o 
 alias wget="wget -c"
 alias diskspace="df -hlT --exclude-type=tmpfs --exclude-type=devtmpfs"
 alias mkdir="mkdir -pv"
+alias v="nvim"

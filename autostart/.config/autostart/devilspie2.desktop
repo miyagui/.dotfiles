@@ -2,7 +2,7 @@
 Name="devilspie2"
 GenericName="devilspie2"
 Comment="Devilspie autostart"
-Exec="systemctl --user start devilspie2"
+Exec=/usr/bin/bash -c "sleep 10 && systemctl --user start devilspie2.service"
 Terminal=false
 Type=Application
 X-Gnome-Autostart=true

@@ -14,14 +14,18 @@ if (gwc == "mpv") then
 	set_window_geometry2(1280, 24, 640, 352);
 	stick_window();
 end
---if (get_window_name() == "term") or 
--- (get_window_name() == "base") then
---	set_window_geometry2(1280, 376, 640, 704);
---	stick_window();
---end
---if (get_window_name() == "Neovim") then
---  set_window_geometry2(1280, 1056, 0, 24);
---end
+if (get_window_name() == "Neovim") then 
+	set_window_geometry2(1280, 376, 640, 704);
+	stick_window();
+end
+if (get_window_name() == "term") then 
+	set_window_geometry2(1280, 376, 640, 704);
+	stick_window();
+end
+if (get_window_name() == "alacroto") then 
+	set_window_geometry2(0, 24, 1280, 1056);
+	stick_window();
+end
 if (gwc == "whatsapp-nativefier-d40211") or
 	(gwc == "Spotify") or
 	(gwc == "Code") then

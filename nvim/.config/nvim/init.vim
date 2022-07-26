@@ -19,6 +19,8 @@ Plug 'mg979/vim-visual-multi'
 Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-surround'
 Plug 'khaveesh/vim-fish-syntax'
+Plug 'ap/vim-css-color'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
@@ -31,6 +33,11 @@ nnoremap k gk
 nnoremap <up> gk
 nnoremap <down> gj
 nnoremap <C-g>        :Goyo<CR>
+nnoremap <C-s>        :w<CR>
+
+"colorscheme PaperColor
+colorscheme gruvbox
+"colorscheme afterglow
 
 let g:vimwiki_global_ext = 0
 let g:vimwiki_list = [{'path': '~/vimwiki/', 'name': 'miya wiki', 'syntax': 'markdown', 'ext': '.md', 'auto_diary_index': 1, 'auto_toc': 1}]
@@ -41,13 +48,13 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 let g:lastplace_ignore = "gitcommit,gitrebase,svn,hgcommit"
 let g:lastplace_ignore_buftype = "quickfix,nofile,help"
 let g:lastplace_open_folds = 0
-let g:ctrlp_map = '<c-p>'
+let g:ctrlp_map = '<C-p>'
 let g:ctrlp_cmd = 'CtrlPMRU'
 
 set encoding=utf-8
 set relativenumber number
-set smarttab
-set cindent
+"set smarttab
+"set cindent
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
@@ -108,3 +115,13 @@ if has('persistent_undo')
   set undofile
   set undodir=~/.cache/vim
 endif
+
+" terminal true colors
+if exists('+termguicolors')
+  let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+
+" no more perl warnings
+let g:loaded_perl_provider = 0
