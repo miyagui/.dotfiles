@@ -1,68 +1,67 @@
 gwc=get_window_class()
 gwt=get_window_type()
 gan=get_application_name()
-gcin=get_class_instance_name()
+-- gcin=get_class_instance_name()
+gwn=get_window_name()
 
-if (gwc == "Brave-browser") and
-	(gwt == "WINDOW_TYPE_NORMAL") then
-	set_window_geometry2(-16, 14, 1312, 1098);
+-- guide to use with gnome extension tactile
+-- [Q][W][E] pos1 QWASZX
+-- [A][S][D] pos2 ASZX
+-- [Z][X][C] pos3 E
+--           pos4 DC
+
+if (gwt == "WINDOW_TYPE_NORMAL") then
+  -- position 1
+  if (gwc == "Brave-browser") then
+    set_window_geometry2(-16, 16, 1312, 1098);
+  end
+  if (gwn == "alacroto") then 
+    set_window_geometry2(0, 24, 1280, 1056);
+  end
+  -- position 2 
+  ---- gnome-apps 
+  if (gwn == "NewsFlash") or
+    (gwc == "Geary") or 
+    (gwc == "Org.gnome.Nautilus") or
+    (gwc == "Gnome-podcasts") then
+    set_window_geometry2(-35, 344, 1350, 774);
+  end
+  ---- other apps
+  if 	(gwc == "streamlink-twitch-gui") or
+      (gwc == "helvum") or 
+      (gwc == "discord") or 
+      (gwc == "obs") or
+      (gwc == "Timeshift-gtk") then
+    set_window_geometry2(0, 376, 1280, 704);
+  end
+  if (gwc == "gnome-control-center") and
+    (gwt == "WINDOW_TYPE_NORMAL") or 
+    (gwc == "easyeffects") and 
+    (gwt == "WINDOW_TYPE_NORMAL") then
+    set_window_geometry2(-61, 321, 1402, 826);
+  end
+  if (gwc == "leagueclientux.exe") and
+    (gwt == "WINDOW_TYPE_NORMAL") then
+    set_window_geometry2(0, 360, 1280, 720);
+  end
+  -- position 3
+  if (gan == "Picture in picture") or
+    (gwc == "mpv") then
+    set_window_geometry2(1280, 24, 640, 352);
+    stick_window();
+  end
+  -- position 4
+  if (gwc == "whatsapp-nativefier-d40211") or
+    (gwc == "Spotify") or
+    (gwc == "Code") or 
+    (gwc == "Vivaldi-stable") or
+    (gwc == "qBittorrent") or
+    (gwn == "nvim") or
+    (gwn == "term") then
+    set_window_geometry2(1280, 376, 640, 704);
+    stick_window();
+  end
 end
-if (gan == "Picture in picture") then
-	set_window_geometry2(1280, 24, 640, 352);
-end
-if (gwc == "mpv") then
-	set_window_geometry2(1280, 24, 640, 352);
-	stick_window();
-end
-if (get_window_name() == "Neovim") then 
-	set_window_geometry2(1280, 376, 640, 704);
-	stick_window();
-end
-if (get_window_name() == "term") then 
-	set_window_geometry2(1280, 376, 640, 704);
-	stick_window();
-end
-if (get_window_name() == "alacroto") then 
-	set_window_geometry2(0, 24, 1280, 1056);
-	stick_window();
-end
-if (gwc == "whatsapp-nativefier-d40211") or
-	(gwc == "Spotify") or
-	(gwc == "Code") then
-	set_window_geometry2(1280, 376, 640, 704);
-	stick_window();
-end
-if (gwc == "qBittorrent") and 
-	(gwt == "WINDOW_TYPE_NORMAL") then
-	set_window_geometry2(1280, 376, 640, 704);
-end
-if 	(gwc == "streamlink-twitch-gui") or
-		(gwc == "helvum") or 
-		-- (gwc == "Spotify") or 
-		(gwc == "discord") then
-	set_window_geometry2(0, 376, 1280, 704);
-end
-if (gwc == "obs") and
-	(gwt == "WINDOW_TYPE_NORMAL") then
-	set_window_geometry2(0, 376, 1280, 704);
-end
-if (gwc == "gnome-control-center") and
-	(gwt == "WINDOW_TYPE_NORMAL") or 
-	(gwc == "easyeffects") and 
-	(gwt == "WINDOW_TYPE_NORMAL") then
-	set_window_geometry2(-61, 321, 1402, 826);
-end
-if (gwc == "Timeshift-gtk") and
-	(gwt == "WINDOW_TYPE_NORMAL") then
-	set_window_geometry2(0, 376, 1280, 704);
-end
-if (gwc == "leagueclientux.exe") and
-	(gwt == "WINDOW_TYPE_NORMAL") then
-	set_window_geometry2(0, 360, 1280, 720);
-end
-if (gwc == "Org.gnome.Nautilus") and 
-	(gwt == "WINDOW_TYPE_NORMAL") or 
-	(gwc == "Gnome-podcasts") and
-	(gwt == "WINDOW_TYPE_NORMAL") then
-	set_window_geometry2(-35, 344, 1350, 774);
-end
+
+
+

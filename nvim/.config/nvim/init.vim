@@ -21,6 +21,7 @@ Plug 'tpope/vim-surround'
 Plug 'khaveesh/vim-fish-syntax'
 Plug 'ap/vim-css-color'
 Plug 'morhetz/gruvbox'
+Plug 'lambdalisue/suda.vim'
 
 call plug#end()
 
@@ -50,6 +51,7 @@ let g:lastplace_ignore_buftype = "quickfix,nofile,help"
 let g:lastplace_open_folds = 0
 let g:ctrlp_map = '<C-p>'
 let g:ctrlp_cmd = 'CtrlPMRU'
+let g:suda_smart_edit = 1
 
 set encoding=utf-8
 set relativenumber number
