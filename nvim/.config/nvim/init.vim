@@ -4,7 +4,7 @@ syntax on
 
 call plug#begin()
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vimwiki/vimwiki'
 Plug 'itchyny/lightline.vim'
 Plug 'christoomey/vim-tmux-navigator'
@@ -28,6 +28,7 @@ call plug#end()
 nnoremap <leader>n 	  :NERDTreeFocus<CR>
 nnoremap <C-t>				:NERDTreeToggle<CR>
 nnoremap <C-f>				:NERDTreeFind<CR>
+
 " Move up/down editor lines includes wrapping lines
 nnoremap j gj
 nnoremap k gk
@@ -36,9 +37,15 @@ nnoremap <down> gj
 nnoremap <C-g>        :Goyo<CR>
 nnoremap <C-s>        :w<CR>
 
-"colorscheme PaperColor
+" Mappings to move lines
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+
 colorscheme gruvbox
-"colorscheme afterglow
 
 let g:vimwiki_global_ext = 0
 let g:vimwiki_list = [{'path': '~/vimwiki/', 'name': 'miya wiki', 'syntax': 'markdown', 'ext': '.md', 'auto_diary_index': 1, 'auto_toc': 1}]
@@ -94,12 +101,12 @@ function! IsNERDTreeOpen()
   return exists("t:NERDTreeBuffName") && (bufwinnr(t:NERDTreeBuffName) != -1)
 endfunction
 
-" Use <c-space> to trigger completion.
-if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
+" Us"e <c-space> to trigger completion.
+"if has('nvim')
+  "inoremap <silent><expr> <c-space> coc#refresh()
+"else
+  "inoremap <silent><expr> <c-@> coc#refresh()
+"endif
 
 " Press esc to disable search highlights
 map <esc> :noh <CR>
@@ -111,6 +118,8 @@ nnoremap N Nzzzv
 " do not show stupid q: window
 map q: :q
 map q/ :q
+" disable macro recording
+map q <Nop>
 
 " persistent undo
 if has('persistent_undo')
