@@ -12,10 +12,8 @@ gwn=get_window_name()
 
 if (gwt == "WINDOW_TYPE_NORMAL") then
 -- position 1
-  if (gwc == "Brave-browser") then
-    set_window_geometry2(-16, 16, 1312, 1098);
-  end
-  if (gwn == "alacroto") then 
+  if (gwn == "alacroto") or
+    (gwc == "firefox") then 
     set_window_geometry2(0, 24, 1280, 1056);
   end
 -- position 2 
@@ -31,7 +29,9 @@ if (gwt == "WINDOW_TYPE_NORMAL") then
       (gwc == "helvum") or 
       (gwc == "discord") or 
       (gwc == "obs") or
-      (gwc == "Timeshift-gtk") then
+      (gwc == "Timeshift-gtk") or 
+      (gwc == "KeePassXC") or
+      (gwc == "Steam") then
     set_window_geometry2(0, 376, 1280, 704);
   end
   if (gwc == "gnome-control-center") or
@@ -48,18 +48,17 @@ if (gwt == "WINDOW_TYPE_NORMAL") then
     stick_window();
   end
 --position 3b
-  --if (gwc == "Vivaldi-stable") then
-    --set_window_geometry2(1280, 24, 640, 704);
-  --end
   if (gwc == "whatsapp-nativefier-d40211") or
     (gwc == "Spotify") or
     (gwc == "Code") or 
     (gwc == "qBittorrent") or
-    (gwn == "alaterm") then
+    (gwn == "alaterm") or
+    (gwc == "qimgv") then
     set_window_geometry2(1280, 24, 640, 704);
     stick_window();
   end
-  if (gwc == "Gpodder") then
+  if (gwc == "Gpodder") or 
+    (gwc == "Komikku") then
     set_window_geometry2(1245, -8, 710, 774);
     stick_window();
   end
