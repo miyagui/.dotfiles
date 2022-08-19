@@ -21,7 +21,8 @@ if (gwt == "WINDOW_TYPE_NORMAL") then
   if (gwn == "NewsFlash") or
     (gwc == "Geary") or 
     (gwc == "Org.gnome.Nautilus") or
-    (gwc == "Gnome-podcasts") then
+    (gwc == "Gnome-podcasts") or
+    (gwc == "Lutris") then
     set_window_geometry2(-35, 344, 1350, 774);
   end
 ---- other apps
@@ -42,11 +43,11 @@ if (gwt == "WINDOW_TYPE_NORMAL") then
     set_window_geometry2(0, 360, 1280, 720);
   end
 -- position 3a
-  if (gan == "Picture in picture") or
-    (gwc == "mpv") then
-    set_window_geometry2(1280, 24, 640, 352);
-    stick_window();
-  end
+--[[  if (gan == "Picture in picture") or]]
+    --[[(gwc == "mpv") then]]
+    --[[set_window_geometry2(1280, 24, 640, 352);]]
+    --[[stick_window();]]
+  --[[end]]
 --position 3b
   if (gwc == "whatsapp-nativefier-d40211") or
     (gwc == "Spotify") or
@@ -79,6 +80,7 @@ if (gwt == "WINDOW_TYPE_NORMAL") then
   --end
 --position 4b
   if (gan == "Picture in picture") or
+    (gan == "Picture-in-Picture") or
     (gwc == "mpv") then
     set_window_geometry2(1280, 728, 640, 352);
     stick_window();
