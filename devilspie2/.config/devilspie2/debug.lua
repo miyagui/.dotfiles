@@ -12,7 +12,8 @@ gwn=get_window_name()
 
 if (gwt == "WINDOW_TYPE_NORMAL") then
 -- position 1
-  if (gwn == "alacroto") or
+  if 
+--    (gwn == "alacroto") or
     (gwc == "firefox") then 
     set_window_geometry2(0, 24, 1280, 1056);
   end
@@ -32,6 +33,7 @@ if (gwt == "WINDOW_TYPE_NORMAL") then
       (gwc == "obs") or
       (gwc == "Timeshift-gtk") or 
       (gwc == "KeePassXC") or
+      (gwc == "Evolution") or
       (gwc == "Steam") then
     set_window_geometry2(0, 376, 1280, 704);
   end
@@ -51,14 +53,15 @@ if (gwt == "WINDOW_TYPE_NORMAL") then
 --position 3b
   if (gwc == "whatsapp-nativefier-d40211") or
     (gwc == "Spotify") or
-    (gwc == "Code") or 
+    (gwc == "Code") or
     (gwc == "qBittorrent") or
-    (gwn == "alaterm") or
+    (gwn == "alacroto") or
     (gwc == "qimgv") then
     set_window_geometry2(1280, 24, 640, 704);
     stick_window();
   end
-  if (gwc == "Gpodder") or 
+  if (gwc == "Gpodder") or
+    (gwc == "Com.github.geigi.cozy") or
     (gwc == "Komikku") then
     set_window_geometry2(1245, -8, 710, 774);
     stick_window();
